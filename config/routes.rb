@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   post 'lists' => 'lists#create'
   get 'lists' => 'lists#index' #一覧の表示
   get 'lists/:id' => 'lists#show',as: 'list' #一つ一つの内容の表示
-  get 'lists/edit' #内容の編集
+  get 'lists/:id/edit' => 'lists#edit',as: 'edit/list' #内容の編集
   get '/top' => 'homes#top'
-  
+  patch 'list/:id' => 'lists#update', as: 'update_list'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
