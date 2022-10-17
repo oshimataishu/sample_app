@@ -12,6 +12,7 @@ class ListsController < ApplicationController
   end
   
   def index
+    @lists = List.all #Listモデルが、やりとりしているデータ全てを取得し、それを@listsというインスタンス変数に格納するアクション
   end
 
   def show

@@ -1,4 +1,4 @@
 class HomesController < ApplicationController
-  def top
+  def top #topアクションを定義している
   end
 end
